@@ -1,6 +1,11 @@
 import React from 'react'
 import './header.styles.scss'
 import { Link } from 'react-router-dom'
+
+/*
+  This link explains why svg files are imported like this
+  https://facebook.github.io/create-react-app/docs/adding-images-fonts-and-files
+*/
 import { ReactComponent as Logo } from '../../assets/crown.svg'
 
 const Header = () => (
