@@ -5,7 +5,7 @@ import './directory.styles.scss'
 class Directory extends React.Component {
   constructor() {
     super()
-
+    /* Pass the url dynamically with state */
     this.state = {
       sections: [
         {
@@ -48,13 +48,10 @@ class Directory extends React.Component {
     return (
       <div className='directory-menu'>
         {
-          this.state.sections.map(({ id, title, imageUrl, size, linkUrl}) => (
+          this.state.sections.map(({ id, ...otherSectionProps }) => (
             <MenuItem
               key={id}
-              title={title}
-              imageUrl={imageUrl}
-              size={size}
-              linkUrl={linkUrl}
+              {...otherSectionProps}
             />
           ))
         }
